@@ -582,15 +582,22 @@ export default function THC() {
                 style={{ color: 'var(--rust)' }}
               >
                 5-MeO-DMT page
-              </Link>{' '}
-              and the{' '}
+              </Link>
+              , the{' '}
               <Link
                 to="/medicines/nn-dmt"
                 style={{ color: 'var(--rust)' }}
               >
                 N,N-DMT page
               </Link>
-              . If you are preparing for either of those medicines and
+              , and the{' '}
+              <Link
+                to="/medicines/iboga"
+                style={{ color: 'var(--rust)' }}
+              >
+                iboga page
+              </Link>
+              . If you are preparing for any of these medicines and
               are a regular cannabis user, the preparation protocols
               in the member site account for this.
             </p>
