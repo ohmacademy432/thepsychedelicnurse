@@ -7,6 +7,7 @@ import About from './pages/About';
 import HarmReduction from './pages/HarmReduction';
 import Medicines from './pages/Medicines';
 import MedicineDetail from './pages/MedicineDetail';
+import MDMA from './pages/medicines/MDMA';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
 import Consent from './pages/Consent';
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/harm-reduction" element={<HarmReduction />} />
             <Route path="/medicines" element={<Medicines />} />
+            <Route path="/medicines/mdma" element={<MDMA />} />
             <Route path="/medicines/:slug" element={<MedicineDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/auth/callback" element={<AuthCallback />} />
