@@ -559,24 +559,36 @@ export default function THC() {
             than has been openly acknowledged so far.
           </MedicinePullquote>
 
-          <p
+          <div
             style={{
               marginTop: 32,
               padding: '18px 22px',
               border: '0.5px solid var(--rule)',
               borderRadius: 2,
-              fontSize: 14,
-              fontStyle: 'italic',
-              color: 'var(--ink-mute)',
-              lineHeight: 1.6,
               maxWidth: 680,
             }}
           >
-            This observation is cross-referenced on the 5-MeO-DMT and
-            N,N-DMT pages. If you are preparing for either of those
-            medicines and are a regular cannabis user, the preparation
-            protocols in the member site account for this.
-          </p>
+            <p
+              style={{
+                fontSize: 14,
+                fontStyle: 'italic',
+                color: 'var(--ink-mute)',
+                lineHeight: 1.6,
+              }}
+            >
+              This observation is cross-referenced on the{' '}
+              <Link
+                to="/medicines/5-meo-dmt"
+                style={{ color: 'var(--rust)' }}
+              >
+                5-MeO-DMT page
+              </Link>{' '}
+              (and on the N,N-DMT page when it is populated). If you
+              are preparing for either of those medicines and are a
+              regular cannabis user, the preparation protocols in the
+              member site account for this.
+            </p>
+          </div>
         </MedicineSection>
 
         <MedicineSection
