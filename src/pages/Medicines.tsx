@@ -7,7 +7,7 @@ export default function Medicines() {
     <>
       <Seo
         title="Medicine Library"
-        description="What each medicine actually does in the body and the mind. Where it comes from, what traditions teach, what the conscious community may not know — every page written through a harm reduction lens."
+        description="What each medicine actually does in the body and the mind. Where it comes from, what traditions teach, what the popular conversation often leaves out — every page written through a harm reduction lens."
       />
       <section className="section-parchment">
         <div className="container">
@@ -16,9 +16,9 @@ export default function Medicines() {
           <p className="lede" style={{ maxWidth: 680 }}>
             What each medicine actually does in the body and the mind. Where
             it comes from. What the traditions around it teach. What the
-            conscious community may not know. What the science knows and
-            doesn&rsquo;t know. Every page written through a harm reduction
-            lens.
+            popular conversation often leaves out. What the science knows
+            and doesn&rsquo;t know. Every page written through a harm
+            reduction lens.
           </p>
 
           <div className="medicine-grid">

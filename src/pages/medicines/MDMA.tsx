@@ -25,7 +25,7 @@ export default function MDMA() {
     <>
       <Seo
         title="MDMA"
-        description="What MDMA actually is, what it can heal, and where the conscious community is quietly hurting itself with it. Harm reduction for MDMA use, held by April Bogle, RN."
+        description="What MDMA actually is, what it can heal, and where casual use outside a clinical container is quietly causing harm. Harm reduction for MDMA use, held by April Bogle, RN."
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>
@@ -33,7 +33,7 @@ export default function MDMA() {
           eyebrow="EMPATHOGEN · SYNTHETIC"
           name="MDMA"
           subtitle="3,4-methylenedioxymethamphetamine"
-          intro="MDMA is one of the most misunderstood substances in the conscious community — often called medicine, often placed on the same shelf as ayahuasca and mushrooms, often stacked into ceremonies it was never designed for. This page is an invitation to see it more clearly. What it is. What it does. What it can heal. And where it starts to hurt people who believed it couldn’t."
+          intro="MDMA is one of the most misunderstood substances on this site — often called medicine, often placed on the same shelf as ayahuasca and mushrooms, often stacked into ceremonies it was never designed for. This page is an invitation to see it more clearly. What it is. What it does. What it can heal. And where it starts to hurt people who believed it couldn’t."
         />
 
         <MedicineSection
@@ -316,11 +316,10 @@ export default function MDMA() {
             that difference is where care has to do its work.
           </p>
           <p>
-            The conscious community isn&rsquo;t wrong to explore these
-            compounds. The invitation is to hold them with both hands, the
-            ceremonial and the clinical. Neither is enough on its own.
-            Both together is where MDMA actually becomes the medicine
-            people hope it is.
+            These compounds are worth exploring. The invitation is to
+            hold them with both hands, the ceremonial and the clinical.
+            Neither is enough on its own. Both together is where MDMA
+            actually becomes the medicine people hope it is.
           </p>
 
           <MedicinePullquote>

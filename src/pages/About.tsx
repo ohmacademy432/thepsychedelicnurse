@@ -94,11 +94,12 @@ export default function About() {
             Harm reduction deserves its own home.
           </blockquote>
           <p>
-            The conscious community holds enormous beauty and real medicine.
-            Alongside it, there are also stories that sometimes drift from
-            what is clinically true &mdash; and it isn&rsquo;t always easy,
-            from the inside, to tell which is which. Often both travel
-            together, from the same teachers.
+            This space &mdash; ceremony, retreat, integration work &mdash;
+            holds enormous beauty and real medicine. Alongside it, there
+            are also stories that sometimes drift from what is clinically
+            true, and it isn&rsquo;t always easy, from the inside, to
+            tell which is which. Often both travel together, from the
+            same teachers.
           </p>
           <p>
             Ohm Academy is the container for clients working with April
