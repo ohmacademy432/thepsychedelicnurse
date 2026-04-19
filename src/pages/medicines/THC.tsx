@@ -597,6 +597,13 @@ export default function THC() {
               >
                 iboga page
               </Link>
+              , the{' '}
+              <Link
+                to="/medicines/ayahuasca"
+                style={{ color: 'var(--rust)' }}
+              >
+                ayahuasca page
+              </Link>
               , and (in a softer form) the{' '}
               <Link
                 to="/medicines/lsd"
