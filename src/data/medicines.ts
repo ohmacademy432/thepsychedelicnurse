@@ -14,6 +14,13 @@ export const MEDICINES: Medicine[] = [
       'The compound in Psilocybe mushrooms. 4–6 hour journey. Low toxicity, high depth.',
   },
   {
+    name: 'LSD',
+    category: 'Classical psychedelic',
+    slug: 'lsd',
+    description:
+      'The original. Long, lucid, and more adulterated on the street than almost anything else. Testing is not optional.',
+  },
+  {
     name: 'MDMA',
     category: 'Empathogen (synthetic)',
     slug: 'mdma',

@@ -590,12 +590,19 @@ export default function THC() {
               >
                 N,N-DMT page
               </Link>
-              , and the{' '}
+              , the{' '}
               <Link
                 to="/medicines/iboga"
                 style={{ color: 'var(--rust)' }}
               >
                 iboga page
+              </Link>
+              , and (in a softer form) the{' '}
+              <Link
+                to="/medicines/lsd"
+                style={{ color: 'var(--rust)' }}
+              >
+                LSD page
               </Link>
               . If you are preparing for any of these medicines and
               are a regular cannabis user, the preparation protocols
