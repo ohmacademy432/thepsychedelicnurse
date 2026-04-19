@@ -853,7 +853,7 @@ export default function Ayahuasca() {
 
           <MedicinePullquote>
             The first time I drank ayahuasca, I thought the purging
-            was something to get through. By the third ceremony, I
+            was something to get through. By the second ceremony, I
             understood that the purging was the medicine arriving.
             The body was letting something go that I had not known
             I was carrying.
