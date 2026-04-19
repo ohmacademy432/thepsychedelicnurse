@@ -25,8 +25,36 @@ export default function LSD() {
   return (
     <>
       <Seo
-        title="LSD"
-        description="The original psychedelic — long, lucid, and more adulterated on the street than almost any other substance. What LSD actually is, what it does, and the harm reduction that matters. Held by April Bogle, RN."
+        title="LSD — the original, and the adulteration problem"
+        description="LSD is one of the most studied psychedelics and one of the most adulterated street drugs. Harm reduction for LSD use, including the NBOMe reality: why reagent testing is the most important drug-checking advice in the psychedelic space."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['LSD', 'acid', 'harm reduction', 'NBOMe', 'reagent testing', 'psychedelic']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'LSD — the original, and the adulteration problem',
+          description:
+            'LSD is one of the most studied psychedelics and one of the most adulterated street drugs.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/lsd',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'LSD' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Reagent testing' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

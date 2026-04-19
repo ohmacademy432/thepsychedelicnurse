@@ -5,7 +5,34 @@ export default function About() {
     <>
       <Seo
         title="About April Bogle, RN"
-        description="32 years in emergency nursing. 8 years in plant medicine. Founder of Ohm Academy of Healing. The woman behind The Psychedelic Nurse."
+        description="32 years in emergency nursing. 8 years in plant medicine. Founder of Ohm Academy of Healing. Meet the nurse behind The Psychedelic Nurse, and the story of why this site exists."
+        type="article"
+        articleSection="About"
+        articleTags={['April Bogle', 'harm reduction', 'emergency nursing', 'plant medicine', 'Ohm Academy']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'About April Bogle, RN',
+          description:
+            '32 years in emergency nursing. 8 years in plant medicine. Founder of Ohm Academy of Healing.',
+          author: {
+            '@type': 'Person',
+            name: 'April Bogle',
+            jobTitle: 'Registered Nurse',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/about',
+          },
+          articleSection: 'About',
+        }}
       />
 
       {/* Opening */}

@@ -24,8 +24,36 @@ export default function MDMA() {
   return (
     <>
       <Seo
-        title="MDMA"
-        description="What MDMA actually is, what it can heal, and where casual use outside a clinical container is quietly causing harm. Harm reduction for MDMA use, held by April Bogle, RN."
+        title="MDMA — not a plant medicine"
+        description="MDMA is synthetic, empathogenic, and one of the most misunderstood substances in the conscious community. Harm reduction for MDMA use: what it is, what it can heal, and where the community is quietly hurting itself with it."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['MDMA', 'harm reduction', 'empathogen', 'MDMA-assisted therapy', 'PTSD']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'MDMA — not a plant medicine',
+          description:
+            'MDMA is synthetic, empathogenic, and one of the most misunderstood substances in the conscious community.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/mdma',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'MDMA' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Psychedelic-assisted therapy' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

@@ -37,8 +37,8 @@ export default function Login() {
   return (
     <>
       <Seo
-        title="Member Access"
-        description="Enter the email April has on file to receive a magic sign-in link."
+        title="Member login"
+        description="Member access to The Psychedelic Nurse clinical tools."
         noIndex
       />
       <section className="section-parchment">
@@ -46,13 +46,14 @@ export default function Login() {
           <p className="eyebrow">MEMBER ACCESS</p>
           <h1>Enter the member site</h1>
           <p className="subtitle">
-            Access is by invitation. Enter the email April has on file and a
-            magic link will be sent to your inbox.
+            Access is by invitation. If your email is on file with April, a
+            magic link will arrive in your inbox.
           </p>
 
           {status === 'sent' ? (
             <p className="lede" style={{ marginTop: 48 }}>
-              Check your email. The magic link will sign you in.
+              Check your email. If your email is on file, the magic link will
+              arrive shortly.
             </p>
           ) : (
             <form className="auth-form" onSubmit={onSubmit}>

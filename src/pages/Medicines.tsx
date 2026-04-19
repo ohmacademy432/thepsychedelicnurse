@@ -6,8 +6,8 @@ export default function Medicines() {
   return (
     <>
       <Seo
-        title="Medicine Library"
-        description="What each medicine actually does in the body and the mind. Where it comes from, what traditions teach, what the popular conversation often leaves out — every page written through a harm reduction lens."
+        title="The medicine library"
+        description="Ten medicines told honestly: psilocybin, MDMA, THC, 5-MeO-DMT, N,N-DMT, LSD, iboga, kambo, hapè, and ayahuasca. What each medicine actually does, where it comes from, and the harm reduction each one requires."
       />
       <section className="section-parchment">
         <div className="container">

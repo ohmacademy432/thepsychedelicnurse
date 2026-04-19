@@ -41,8 +41,8 @@ export default function HarmReduction() {
   return (
     <>
       <Seo
-        title="Harm Reduction"
-        description="What harm reduction means here. The five non-negotiables, the hard contraindications, and the rule that always wins: defer to your doctor."
+        title="What harm reduction means here"
+        description="Every medicine on this site carries risks — cardiac, psychological, legal, relational. Harm reduction names those risks plainly so you can weigh them consciously. The five non-negotiables of safe psychedelic work."
       />
 
       {/* Hero */}

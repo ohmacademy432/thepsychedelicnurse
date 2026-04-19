@@ -25,8 +25,36 @@ export default function Hape() {
   return (
     <>
       <Seo
-        title="Hapè"
-        description="Hapè is the smallest medicine in this library by effect, and one of the most present. Sacred Amazonian snuff and pharmacologically active tobacco — both truths held with care. Honest harm reduction from April Bogle, RN."
+        title="Hapè — sacred medicine and concentrated nicotine"
+        description="Hapè is both sacred Amazonian snuff and pharmacologically active tobacco. Honoring the Yawanawá and Huni Kuin lineage while being honest about what Nicotiana rustica actually does in the body. Practical guidance on kuripe and tepi use."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['hapè', 'rapé', 'harm reduction', 'Yawanawá', 'Huni Kuin', 'Nicotiana rustica']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Hapè — sacred medicine and concentrated nicotine',
+          description:
+            'Hapè is both sacred Amazonian snuff and pharmacologically active tobacco. Honoring the Yawanawá and Huni Kuin lineage while being honest about what Nicotiana rustica actually does in the body.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/hape',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'Hapè' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Nicotiana rustica' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

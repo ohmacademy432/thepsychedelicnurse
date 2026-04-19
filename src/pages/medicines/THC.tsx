@@ -26,8 +26,36 @@ export default function THC() {
   return (
     <>
       <Seo
-        title="THC"
-        description="What THC actually does in the body and the nervous system — at three doses: casual, habitual, psychedelic. Honest information, not judgment. Harm reduction for cannabis, held by April Bogle, RN."
+        title="THC — cannabis as medicine and as habit"
+        description="THC is a psychedelic at dose, a somatic medicine at intention, and an emotional blunting agent at daily habitual use. A nurse's honest look at what cannabis actually does — including its effect on DMT medicine work."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['THC', 'cannabis', 'harm reduction', 'cannabis use disorder', 'somatic medicine']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'THC — cannabis as medicine and as habit',
+          description:
+            'THC is a psychedelic at dose, a somatic medicine at intention, and an emotional blunting agent at daily habitual use.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/thc',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'THC' },
+            { '@type': 'Thing', name: 'Cannabis' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

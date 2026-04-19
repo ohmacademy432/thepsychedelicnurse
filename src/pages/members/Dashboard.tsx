@@ -42,7 +42,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <Seo title="Member Dashboard" noIndex />
+      <Seo title="Member dashboard" noIndex />
       <section className="section-parchment">
         <div className="container">
           <p className="eyebrow">MEMBER SITE</p>

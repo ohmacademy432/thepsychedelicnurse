@@ -37,7 +37,11 @@ export default function Consent() {
 
   return (
     <>
-      <Seo title="Informed Consent" noIndex />
+      <Seo
+        title="Informed consent"
+        description="Review and sign informed consent for member access."
+        noIndex
+      />
       <section className="section-parchment">
         <div className="container narrow prose">
           <p className="eyebrow">INFORMED CONSENT</p>

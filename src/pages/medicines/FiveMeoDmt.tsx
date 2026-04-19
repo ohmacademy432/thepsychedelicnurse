@@ -27,8 +27,36 @@ export default function FiveMeoDmt() {
   return (
     <>
       <Seo
-        title="5-MeO-DMT"
-        description="5-MeO-DMT is two medicines in one molecule: a somatic release tool at a lower dose, and the most complete dissolution of self available to a human being at a full dose. Honest harm reduction, held by April Bogle, RN."
+        title="5-MeO-DMT — two medicines in one molecule"
+        description="5-MeO-DMT at a lower dose is a somatic release medicine. At a full dose, it is the most complete ego dissolution available to a human body in 15 minutes. Clinical harm reduction for both experiences."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['5-MeO-DMT', 'toad medicine', 'harm reduction', 'ego dissolution', 'somatic release']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: '5-MeO-DMT — two medicines in one molecule',
+          description:
+            '5-MeO-DMT at a lower dose is a somatic release medicine. At a full dose, it is the most complete ego dissolution available to a human body in 15 minutes.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/5-meo-dmt',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: '5-MeO-DMT' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Ego dissolution' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

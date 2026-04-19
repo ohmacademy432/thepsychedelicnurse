@@ -26,8 +26,36 @@ export default function Kambo() {
   return (
     <>
       <Seo
-        title="Kambo"
-        description="Kambo is not a psychedelic. It is a deliberately induced cleansing crisis — frog peptides applied to burned skin that trigger a remarkable physiological reset. Honest harm reduction, including the water protocol that matters most, held by April Bogle, RN."
+        title="Kambo — the purge medicine and the hyponatremia reality"
+        description="Kambo is not a psychedelic. It is a deliberately induced cleansing crisis with peptides from the giant monkey frog. The clinical conversation about kambo safety almost no one has: why water intoxication is the most common cause of kambo deaths."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['kambo', 'harm reduction', 'hyponatremia', 'Matses', 'purge medicine']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Kambo — the purge medicine and the hyponatremia reality',
+          description:
+            'Kambo is not a psychedelic. It is a deliberately induced cleansing crisis with peptides from the giant monkey frog.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/kambo',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'Kambo' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Hyponatremia' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

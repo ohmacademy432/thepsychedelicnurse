@@ -72,8 +72,36 @@ export default function NNDmt() {
   return (
     <>
       <Seo
-        title="N,N-DMT"
-        description="N,N-DMT is the spirit molecule of cultural imagination and the molecule behind the most consistent strange phenomenon in psychedelic research — the reported encounter with intelligences. Harm reduction and honest framing, held by April Bogle, RN."
+        title="N,N-DMT — the visionary molecule"
+        description="N,N-DMT and 5-MeO-DMT are not the same medicine. One methoxy group, two entirely different experiences. What N,N-DMT actually is, why entity encounters keep happening, and how to approach this medicine with the container it requires."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['N,N-DMT', 'DMT', 'harm reduction', 'entity encounters', 'tryptamine']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'N,N-DMT — the visionary molecule',
+          description:
+            'N,N-DMT and 5-MeO-DMT are not the same medicine. One methoxy group, two entirely different experiences.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/nn-dmt',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'N,N-DMT' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Entity encounters' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

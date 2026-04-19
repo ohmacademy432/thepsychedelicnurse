@@ -1,5 +1,5 @@
 import MemberPlaceholder from './MemberPlaceholder';
 
 export default function ScreeningTools() {
-  return <MemberPlaceholder eyebrow="SCREENING" title="Screening Tools" />;
+  return <MemberPlaceholder eyebrow="SCREENING" title="Screening tools" />;
 }

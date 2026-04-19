@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /members
+Disallow: /members/
 Disallow: /auth
+Disallow: /auth/
 Disallow: /consent
+Disallow: /login
 
 Sitemap: https://thepsychedelicnurse.org/sitemap.xml

@@ -27,8 +27,37 @@ export default function Iboga() {
   return (
     <>
       <Seo
-        title="Iboga & Ibogaine"
-        description="Two medicines, one molecule family. The Bwiti lineage, the cardiac screening that matters, the addiction interruption evidence, and honest harm reduction — held by April Bogle, RN."
+        title="Iboga and Ibogaine — the cardiac conversation"
+        description="Iboga has the most serious cardiac risk profile of any medicine on this site, and the most remarkable addiction-interruption effects in modern psychiatry. A nurse's honest guide to iboga safety, ibogaine treatment, and the Bwiti tradition this medicine comes from."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['iboga', 'ibogaine', 'harm reduction', 'addiction', 'Bwiti', 'QT prolongation', 'cardiac safety']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Iboga and Ibogaine — the cardiac conversation',
+          description:
+            'Iboga has the most serious cardiac risk profile of any medicine on this site, and the most remarkable addiction-interruption effects in modern psychiatry.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/iboga',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'Iboga' },
+            { '@type': 'Thing', name: 'Ibogaine' },
+            { '@type': 'Thing', name: 'Addiction treatment' },
+            { '@type': 'Thing', name: 'Bwiti' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

@@ -25,8 +25,36 @@ export default function Psilocybin() {
   return (
     <>
       <Seo
-        title="Psilocybin"
-        description="What psilocybin actually is, what the research shows, and where the risks actually live. Physiologically low-toxicity, psychologically not simple. Harm reduction for mushroom use, held by April Bogle, RN."
+        title="Psilocybin — the mushroom molecule"
+        description="Psilocybin is often called the safest classical psychedelic. That's physiologically true, and psychologically incomplete. Harm reduction for psilocybin mushroom work, including the microdosing-as-self-treatment question."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['psilocybin', 'mushrooms', 'harm reduction', 'microdosing', 'Mazatec']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Psilocybin — the mushroom molecule',
+          description:
+            'Psilocybin is often called the safest classical psychedelic. That is physiologically true, and psychologically incomplete.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/psilocybin',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'Psilocybin' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Microdosing' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

@@ -25,8 +25,36 @@ export default function Ayahuasca() {
   return (
     <>
       <Seo
-        title="Ayahuasca"
-        description="Ayahuasca is not a molecule — it is a brewed preparation of two Amazonian plants, a ceremony, a dieta, and a living tradition held by indigenous peoples for generations. Honest harm reduction for the Western seeker, held by April Bogle, RN."
+        title="Ayahuasca — the vine, the leaf, and the living tradition"
+        description="Ayahuasca is not one plant but a brew, not one ceremony but a living tradition held by indigenous peoples across the Amazon. Harm reduction for ayahuasca work: the dieta, the MAOI reality, and how to evaluate a retreat before booking."
+        type="article"
+        articleSection="Medicine Library"
+        articleTags={['ayahuasca', 'harm reduction', 'dieta', 'Shipibo', 'MAOI', 'retreat safety']}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Ayahuasca — the vine, the leaf, and the living tradition',
+          description:
+            'Ayahuasca is not one plant but a brew, not one ceremony but a living tradition held by indigenous peoples across the Amazon.',
+          author: { '@type': 'Person', name: 'April Bogle', jobTitle: 'Registered Nurse' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'The Psychedelic Nurse',
+            url: 'https://thepsychedelicnurse.org',
+          },
+          datePublished: '2026-04-19',
+          dateModified: '2026-04-19',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://thepsychedelicnurse.org/medicines/ayahuasca',
+          },
+          articleSection: 'Medicine Library',
+          about: [
+            { '@type': 'Thing', name: 'Ayahuasca' },
+            { '@type': 'Thing', name: 'Harm reduction' },
+            { '@type': 'Thing', name: 'Dieta' },
+          ],
+        }}
       />
 
       <MedicinePageLayout tocItems={TOC_ITEMS}>

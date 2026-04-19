@@ -25,7 +25,11 @@ export default function AuthCallback() {
 
   return (
     <>
-      <Seo title="Signing you in..." noIndex />
+      <Seo
+        title="Signing you in"
+        description="Processing your magic link."
+        noIndex
+      />
       <section className="section-parchment">
         <div className="container narrow">
           <p className="eyebrow">ONE MOMENT</p>

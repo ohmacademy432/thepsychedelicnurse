@@ -19,7 +19,10 @@ const REQUEST_ACCESS_SMS =
 export default function Home() {
   return (
     <>
-      <Seo />
+      <Seo
+        title="Harm reduction for psychedelic and plant medicine work"
+        description="A trauma-informed, clinically grounded harm reduction resource for those preparing for, moving through, or integrating a journey with psychedelic compounds and plant medicines. Held by April Bogle, RN."
+      />
 
       {/* Hero */}
       <section className="section-parchment">
