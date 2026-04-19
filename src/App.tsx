@@ -16,6 +16,7 @@ import Iboga from './pages/medicines/Iboga';
 import LSD from './pages/medicines/LSD';
 import Ayahuasca from './pages/medicines/Ayahuasca';
 import Kambo from './pages/medicines/Kambo';
+import Hape from './pages/medicines/Hape';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
 import Consent from './pages/Consent';
@@ -46,6 +47,7 @@ export default function App() {
             <Route path="/medicines/lsd" element={<LSD />} />
             <Route path="/medicines/ayahuasca" element={<Ayahuasca />} />
             <Route path="/medicines/kambo" element={<Kambo />} />
+            <Route path="/medicines/hape" element={<Hape />} />
             <Route path="/medicines/:slug" element={<MedicineDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/auth/callback" element={<AuthCallback />} />

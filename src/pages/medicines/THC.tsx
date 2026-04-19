@@ -611,6 +611,13 @@ export default function THC() {
               >
                 LSD page
               </Link>
+              {' '}and the{' '}
+              <Link
+                to="/medicines/hape"
+                style={{ color: 'var(--rust)' }}
+              >
+                hapè page
+              </Link>
               . If you are preparing for any of these medicines and
               are a regular cannabis user, the preparation protocols
               in the member site account for this.
