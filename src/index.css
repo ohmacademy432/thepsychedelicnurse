@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -60,7 +60,7 @@ ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
   font-weight: 400;
   color: var(--forest);
 }
@@ -94,7 +94,7 @@ p {
 }
 
 em, i {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
   font-style: italic;
   font-weight: 400;
 }
@@ -122,7 +122,7 @@ a:hover {
 }
 
 .eyebrow {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 11px;
   text-transform: uppercase;
@@ -131,7 +131,7 @@ a:hover {
 }
 
 .serif {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
 }
 
 .meta {
@@ -141,7 +141,7 @@ a:hover {
 
 .btn {
   display: inline-block;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
@@ -190,6 +190,18 @@ a:hover {
   color: var(--parchment);
 }
 
+.btn-outline-light {
+  background: transparent;
+  color: var(--parchment);
+  border-color: var(--parchment);
+}
+
+.btn-outline-light:hover {
+  background: var(--parchment);
+  color: var(--forest);
+  border-color: var(--parchment);
+}
+
 .btn[disabled] {
   opacity: 0.4;
   cursor: not-allowed;
@@ -218,4 +230,680 @@ section .container {
 ::selection {
   background: var(--sage);
   color: var(--forest);
+}
+
+/* ============================================================
+   Section & page helpers
+   ============================================================ */
+
+.section-parchment      { background: var(--parchment); }
+.section-parchment-warm { background: var(--parchment-warm); }
+.section-forest {
+  background: var(--forest);
+  color: var(--parchment);
+}
+.section-forest h1,
+.section-forest h2,
+.section-forest h3 { color: var(--parchment); }
+.section-forest p  { color: var(--parchment); }
+.section-forest .eyebrow { color: var(--sage); }
+
+.lede {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 720px;
+  color: var(--ink);
+}
+
+.lede-sm {
+  max-width: 620px;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.eyebrow + h1,
+.eyebrow + h2 {
+  margin-top: 14px;
+}
+
+h1 + .subtitle,
+h2 + .subtitle {
+  margin-top: 20px;
+}
+
+.subtitle + p,
+h1 + p,
+h2 + p {
+  margin-top: 24px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.rust-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--rust);
+  margin-top: 28px;
+}
+
+.rust-link:hover {
+  color: var(--rust-deep);
+}
+
+.card {
+  background: var(--bone);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.card .eyebrow {
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.cards-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+  .cards-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Editorial long-form
+   ============================================================ */
+
+.container.narrow {
+  max-width: 760px;
+}
+
+.prose p + p { margin-top: 20px; }
+.prose p + h2,
+.prose p + h3 { margin-top: 40px; }
+.prose h2 + p,
+.prose h3 + p { margin-top: 20px; }
+
+.pullquote {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.35;
+  color: var(--forest);
+  max-width: 720px;
+  margin: 40px 0;
+  padding-left: 24px;
+  border-left: 1px solid var(--sage);
+}
+
+@media (max-width: 768px) {
+  .pullquote {
+    font-size: 22px;
+    padding-left: 16px;
+    margin: 28px 0;
+  }
+}
+
+.bullet-list {
+  margin-top: 28px;
+  padding-left: 1.5em;
+}
+
+.bullet-list li {
+  list-style: disc outside;
+  margin-top: 12px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.bullet-list li::marker {
+  color: var(--rust);
+}
+
+/* Principles (numbered rows) */
+.principles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+}
+
+.principle {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 40px 0;
+  border-top: 0.5px solid var(--rule);
+}
+
+.principle:last-child {
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.principle-num {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--sage-deep);
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.principle-title {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  color: var(--forest);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.principle-body {
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+@media (max-width: 768px) {
+  .principle {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    padding: 28px 0;
+  }
+  .principle-num { font-size: 22px; }
+  .principle-title { font-size: 22px; }
+}
+
+/* Medicine library grid */
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 56px;
+}
+
+/* Member dashboard 2×2 grid */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+@media (max-width: 768px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.medicine-card {
+  background: var(--bone);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+.medicine-card:hover {
+  border-color: var(--rust);
+  color: var(--ink);
+}
+
+.medicine-card .eyebrow {
+  color: var(--sage-deep);
+}
+
+.medicine-name {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--forest);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.medicine-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.medicine-card .rust-link {
+  margin-top: 16px;
+}
+
+/* Contact list */
+.contact-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-list li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 0.5px solid rgba(143, 166, 144, 0.3);
+}
+
+.contact-list li:first-child {
+  border-top: 0.5px solid rgba(143, 166, 144, 0.3);
+}
+
+.contact-list .label {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--sage);
+}
+
+@media (max-width: 768px) {
+  .contact-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+/* ============================================================
+   Auth + consent forms
+   ============================================================ */
+
+.auth-form {
+  margin-top: 48px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-field input {
+  background: var(--bone);
+  border: 0.5px solid var(--rule);
+  border-radius: 2px;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: var(--ink);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.auth-field input::placeholder {
+  color: var(--ink-mute);
+}
+
+.auth-field input:focus {
+  outline: none;
+  border-color: var(--forest);
+  background: var(--parchment);
+}
+
+.auth-error {
+  color: var(--rust-deep);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.consent-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.consent-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.consent-checkbox input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  accent-color: var(--forest);
+  cursor: pointer;
+}
+
+/* Sign out text link */
+.nav-signout {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  color: var(--ink-mute);
+  background: none;
+  border: none;
+  padding: 6px 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.nav-signout:hover {
+  color: var(--rust);
+}
+
+.nav-mobile-signout {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-size: 24px;
+  color: var(--ink-mute);
+  background: none;
+  border: none;
+  padding: 22px 4px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: -0.2px;
+}
+
+.nav-mobile-signout:hover {
+  color: var(--rust);
+}
+
+/* ============================================================
+   App shell
+   ============================================================ */
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1 0 auto;
+}
+
+/* ============================================================
+   Nav
+   ============================================================ */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--parchment);
+  border-bottom: 0.5px solid var(--rule);
+  padding: 20px 40px;
+}
+
+.site-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-brand {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--forest);
+  letter-spacing: 0.2px;
+}
+
+.nav-brand:hover {
+  color: var(--forest-soft);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--forest);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--rust);
+}
+
+.nav-cta {
+  margin-left: 8px;
+  padding: 12px 22px;
+}
+
+.nav-burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.nav-burger span {
+  display: block;
+  height: 1px;
+  background: var(--forest);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    padding: 18px 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-burger {
+    display: flex;
+  }
+}
+
+/* Mobile slide-in menu */
+.nav-mobile {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--parchment);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 40px;
+}
+
+.nav-mobile-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.nav-mobile-close {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--forest);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.nav-mobile-list li {
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.nav-mobile-list a {
+  display: block;
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-size: 24px;
+  color: var(--forest);
+  padding: 22px 4px;
+  letter-spacing: -0.2px;
+}
+
+.nav-mobile-list a:hover,
+.nav-mobile-list a.active {
+  color: var(--rust);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.site-footer {
+  background: var(--forest);
+  color: var(--parchment);
+  padding: 72px 40px 40px;
+}
+
+.site-footer a {
+  color: var(--parchment);
+}
+
+.site-footer a:hover {
+  color: var(--sage);
+}
+
+.site-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 56px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-size: 24px;
+  color: var(--parchment);
+  line-height: 1.1;
+}
+
+.footer-tagline {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--sage);
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+.footer-eyebrow {
+  color: var(--sage);
+  margin-bottom: 4px;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a,
+.footer-contact a {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: var(--sage);
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--parchment);
+}
+
+.site-footer-bottom {
+  max-width: 1100px;
+  margin: 56px auto 0;
+  padding-top: 24px;
+  border-top: 0.5px solid rgba(143, 166, 144, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: var(--sage);
+  line-height: 1.6;
+}
+
+.footer-fineprint {
+  font-size: 12px;
+  color: rgba(245, 240, 228, 0.55);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 48px 20px 32px;
+  }
+  .site-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .site-footer-bottom {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    gap: 20px;
+  }
 }
