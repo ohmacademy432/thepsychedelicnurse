@@ -11,6 +11,7 @@ import MDMA from './pages/medicines/MDMA';
 import Psilocybin from './pages/medicines/Psilocybin';
 import THC from './pages/medicines/THC';
 import FiveMeoDmt from './pages/medicines/FiveMeoDmt';
+import NNDmt from './pages/medicines/NNDmt';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
 import Consent from './pages/Consent';
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/medicines/psilocybin" element={<Psilocybin />} />
             <Route path="/medicines/thc" element={<THC />} />
             <Route path="/medicines/5-meo-dmt" element={<FiveMeoDmt />} />
+            <Route path="/medicines/nn-dmt" element={<NNDmt />} />
             <Route path="/medicines/:slug" element={<MedicineDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/auth/callback" element={<AuthCallback />} />

@@ -1000,6 +1000,78 @@ h2 + p {
   scroll-margin-top: 96px;
 }
 
+/* ============================================================
+   Inline comparison (N,N-DMT vs 5-MeO-DMT on the N,N-DMT page)
+   Two-column side-by-side on desktop, stacks on mobile.
+   ============================================================ */
+
+.comparison-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 40px 0;
+  max-width: 680px;
+  border: 0.5px solid var(--rule);
+  border-radius: 2px;
+  background: var(--bone);
+}
+
+.comparison-col {
+  padding: 28px 24px;
+}
+
+.comparison-col:first-child {
+  border-right: 0.5px solid var(--sage);
+}
+
+.comparison-col-head {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--forest);
+  margin: 0 0 20px 0;
+  padding-bottom: 14px;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.comparison-row {
+  margin-top: 18px;
+}
+
+.comparison-row:first-of-type {
+  margin-top: 0;
+}
+
+.comparison-label {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--sage-deep);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comparison-row p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .comparison-table {
+    grid-template-columns: 1fr;
+  }
+  .comparison-col:first-child {
+    border-right: none;
+    border-bottom: 0.5px solid var(--sage);
+  }
+}
+
 /* Decision framework lists */
 .decision-block {
   margin-top: 32px;

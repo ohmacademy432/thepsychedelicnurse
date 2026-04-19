@@ -583,10 +583,16 @@ export default function THC() {
               >
                 5-MeO-DMT page
               </Link>{' '}
-              (and on the N,N-DMT page when it is populated). If you
-              are preparing for either of those medicines and are a
-              regular cannabis user, the preparation protocols in the
-              member site account for this.
+              and the{' '}
+              <Link
+                to="/medicines/nn-dmt"
+                style={{ color: 'var(--rust)' }}
+              >
+                N,N-DMT page
+              </Link>
+              . If you are preparing for either of those medicines and
+              are a regular cannabis user, the preparation protocols
+              in the member site account for this.
             </p>
           </div>
         </MedicineSection>
