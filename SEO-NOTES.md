@@ -1,40 +1,42 @@
 # SEO & launch notes
 
-Things the code cannot do from a terminal. April (or a future session) handles these before/after first deploy.
+## 1. Generated image assets (in place — regenerate only if the visual identity changes)
 
-## 1. Generate `public/og-default.png` (required for rich social previews)
+- **`public/og-default.png`** (1200×630) — default Open Graph preview for social shares (iMessage, Slack, LinkedIn, WhatsApp, Facebook, etc.). Generated from `public/og-default-template.html` via headless Edge.
+- **`public/apple-touch-icon.png`** (180×180) — iOS home-screen shortcut. Flat parchment tile with forest leaf; iOS applies its own rounded-corner mask.
+- **`public/favicon.ico`** (32×32 PNG-in-ICO) — browser tab fallback for older browsers. Modern browsers use `favicon.svg` first.
+- **`public/favicon.svg`** — primary favicon, vector, scales to any size.
 
-The SEO component references `/og-default.png` as the default Open Graph image (the preview that appears when someone shares any page to iMessage, Slack, LinkedIn, WhatsApp, Facebook).
+### To regenerate (if brand marks or colors change)
 
-1. Open `public/og-default-template.html` in Chrome.
-2. DevTools → toggle device toolbar → set dimensions to **1200 × 630**.
-3. DevTools → … menu → *Capture full size screenshot* (or `Ctrl+Shift+P` → "Capture screenshot").
-4. Crop/confirm the image is exactly 1200 × 630. Save as **`public/og-default.png`**.
-5. Verify preview by pasting `https://thepsychedelicnurse.org` into <https://www.opengraph.xyz/> after deploy.
+**OG image (1200×630, uses Cormorant Garamond + Jost from Google Fonts):**
 
-Fonts used in the template match the site: **Cormorant Garamond** (display) + **Jost** (eyebrow/sans).
+1. Open `public/og-default-template.html` in Chrome/Edge.
+2. DevTools → toggle device toolbar → *Responsive* → set dimensions to **1200 × 630**.
+3. DevTools → … menu → *Capture screenshot*.
+4. Save as **`public/og-default.png`**.
 
-## 2. Generate `public/apple-touch-icon.png` and `public/favicon.ico`
+**Favicon + apple-touch-icon:**
 
-iOS home-screen shortcuts and older browsers want raster versions of the favicon.
+Headless Edge can't reliably capture at favicon-scale viewports on Windows — its effective CSS viewport doesn't match `--window-size`. Use `@resvg/resvg-js` (a small Rust-in-WASM SVG rasterizer) as a one-off:
 
-1. Open `public/favicon-template.html` in Chrome.
-2. DevTools → Elements → right-click the `.icon` div → *Capture node screenshot*.
-3. Save the 180×180 output as **`public/apple-touch-icon.png`**.
-4. Convert the same image to **`public/favicon.ico`** using an online converter (e.g. <https://realfavicongenerator.net/> or <https://favicon.io/favicon-converter/>) — include 16×16, 32×32, and 48×48 in the single .ico file.
+```sh
+npm install --save-dev @resvg/resvg-js
+# Write a rasterize.cjs — see the commit history for the reference script —
+# that renders the favicon SVG at 180×180 (flat background for apple-touch-icon)
+# and 32×32 (rounded tile for favicon.ico), and wraps the 32×32 PNG in an ICO header.
+node rasterize.cjs
+npm uninstall @resvg/resvg-js   # keep runtime deps minimal
+```
 
-Until these exist, browsers will fall back to `favicon.svg` silently (no broken image displayed).
+## 2. Supabase — invite-only access (done)
 
-## 3. Supabase — invite-only access
+1. ✅ Public signups disabled. Supabase dashboard → *Authentication* → *Providers* → *Email* → "Allow new users to sign up" is OFF.
+2. **Adding a new member going forward.** Supabase dashboard → *Authentication* → *Users* → *Invite user* → enter email. The user can then visit `/login`, enter that email, and receive a magic link. Unknown emails receive nothing (no signal, by design).
 
-The Login page UI now uses "if on file" framing, but the access gate itself lives in Supabase. Two one-time settings:
+## 3. Lighthouse audit (post-deploy)
 
-1. **Disable public signups.** Supabase dashboard → *Authentication* → *Providers* → *Email* → toggle **"Allow new users to sign up"** OFF.
-2. **Adding a member.** Supabase dashboard → *Authentication* → *Users* → *Invite user* → enter email. Takes ~30 seconds. The user can then visit `/login`, enter that email, and receive a magic link. Unknown emails receive nothing (no signal, by design).
-
-## 4. Lighthouse audit (post-deploy)
-
-Cannot run from a terminal build environment — requires Chrome DevTools against the live site. Run once the site is deployed to <https://thepsychedelicnurse.org>:
+Can't run from a terminal build environment — requires Chrome DevTools against the live site. Run once deployed to <https://thepsychedelicnurse.org>:
 
 1. Open Chrome → the live site.
 2. DevTools → *Lighthouse* tab → *Mode: Navigation* → *Device: Desktop* → *Analyze page load*. Repeat for *Device: Mobile*.
@@ -44,11 +46,11 @@ Cannot run from a terminal build environment — requires Chrome DevTools agains
 Common issues + fixes if any category comes in low:
 
 - **Render-blocking fonts** → already mitigated by `<link rel="preconnect">` in `index.html`.
-- **Missing alt text** → run a scan: `grep -n "<img" src/` — every `<img>` should have `alt="..."`.
+- **Missing alt text** → no `<img>` tags exist in `src/` today; verify with `grep -n "<img" src/` if any are added later.
 - **Color contrast** → site palette is designed for contrast; Lighthouse usually only flags subtle mutes. If flagged, adjust the specific element.
-- **Unused JS** → the main bundle is ~240 KB gzipped. Acceptable. Code-splitting can be revisited later.
+- **Unused JS** → the main bundle is ~250 KB gzipped. Acceptable. Code-splitting can be revisited later.
 
-## 5. Submit sitemap to Google (post-deploy)
+## 4. Submit sitemap to Google (post-deploy)
 
 Once deployed and DNS verified:
 
@@ -58,23 +60,24 @@ Once deployed and DNS verified:
 
 Bing Webmaster Tools: same flow at <https://www.bing.com/webmasters>.
 
-## 6. Responsive / mobile check (pre-deploy)
+## 5. Responsive / mobile check (pre-deploy)
 
-Because Lighthouse can't be run from this environment, do a manual mobile sanity check before launch:
+Because Lighthouse can't run from this environment, do a manual mobile sanity check before launch:
 
 1. `npm run dev`
 2. Open the site in Chrome → DevTools → toggle device toolbar → cycle through: *iPhone 14 Pro*, *iPhone SE*, *Pixel 7*, *iPad mini*.
 3. Verify on each viewport: hero reads, medicine TOC collapses gracefully, dose blocks stay readable, safety callouts don't overflow, sticky nav doesn't cover content, decision blocks (✓ / ✗) stack correctly.
 4. Tap around through at least one full medicine page (recommend ayahuasca — has the most components).
 
-## 7. Deployment checklist (first push)
+## 6. Deployment checklist (first push)
 
-- [ ] `public/og-default.png` generated (Section 1 above)
-- [ ] `public/apple-touch-icon.png` generated (Section 2)
-- [ ] `public/favicon.ico` generated (Section 2)
-- [ ] Supabase: public signups disabled (Section 3.1)
-- [ ] Supabase: first client(s) invited (Section 3.2)
+- [x] `public/og-default.png` generated
+- [x] `public/apple-touch-icon.png` generated
+- [x] `public/favicon.ico` generated
+- [x] Supabase: public signups disabled
+- [ ] Supabase: first client(s) invited
 - [ ] Netlify: DNS pointed to thepsychedelicnurse.org
 - [ ] Netlify: HTTPS enforced
-- [ ] Post-deploy: Lighthouse pass (Section 4)
-- [ ] Post-deploy: sitemap submitted to Google + Bing (Section 5)
+- [ ] Post-deploy: Lighthouse pass (Section 3)
+- [ ] Post-deploy: sitemap submitted to Google + Bing (Section 4)
+- [ ] Pre-deploy: manual mobile QA (Section 5)
