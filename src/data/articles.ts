@@ -20,6 +20,19 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'ibogaine-cardiac-safety',
+    title:
+      "Ibogaine is moving into clinical trials. The cardiac questions haven't moved with it.",
+    subtitle:
+      "An emergency nurse's guide to QT, CYP2D6, and the questions every facilitator and journeyer should be asking.",
+    excerpt:
+      'In late April 2026, the White House signed an executive order accelerating federal review of psychedelic compounds — naming ibogaine specifically — and the FDA cleared the first US ibogaine clinical trial. The regulatory timeline is moving faster than the cardiac safety conversation. A clinical, harm-reduction look at what the QT interval actually is, why ibogaine prolongs it, who is at higher risk, and the questions every journeyer should bring to a facilitator.',
+    publishedDate: '2026-05-01',
+    publishedLabel: 'May 2026',
+    readTime: '11 min read',
+    tags: ['ibogaine', 'iboga', 'cardiac safety', 'harm reduction', 'facilitator ethics'],
+  },
+  {
     slug: 'mdma-in-plant-medicine',
     title: 'MDMA in the plant medicine community',
     subtitle: "What it is, what it isn't, and the questions we should be asking.",

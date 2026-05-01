@@ -20,6 +20,7 @@ import Kambo from './pages/medicines/Kambo';
 import Hape from './pages/medicines/Hape';
 import Articles from './pages/Articles';
 import MdmaInPlantMedicine from './pages/articles/MdmaInPlantMedicine';
+import IbogaineCardiacSafety from './pages/articles/IbogaineCardiacSafety';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
 import Consent from './pages/Consent';
@@ -59,6 +60,10 @@ export default function App() {
             <Route
               path="/articles/mdma-in-plant-medicine"
               element={<MdmaInPlantMedicine />}
+            />
+            <Route
+              path="/articles/ibogaine-cardiac-safety"
+              element={<IbogaineCardiacSafety />}
             />
 
             <Route path="/login" element={<Login />} />
