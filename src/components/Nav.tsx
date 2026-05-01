@@ -6,6 +6,7 @@ const LINKS = [
   { to: '/about', label: 'About' },
   { to: '/medicines', label: 'Medicines' },
   { to: '/harm-reduction', label: 'Harm Reduction' },
+  { to: '/articles', label: 'Writing' },
 ];
 
 export default function Nav() {

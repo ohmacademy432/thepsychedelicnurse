@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
+import { ARTICLES } from '../data/articles';
 
 const REQUEST_ACCESS_MAILTO =
   'mailto:ohmacademy432@gmail.com' +
@@ -90,8 +91,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Latest Writing */}
+      {ARTICLES.length > 0 && (
+        <section className="section-parchment-warm">
+          <div className="container">
+            <p className="eyebrow">LATEST WRITING</p>
+            <h2>{ARTICLES[0].title}</h2>
+            <p
+              style={{
+                fontSize: 22,
+                lineHeight: 1.5,
+                fontStyle: 'italic',
+                color: 'var(--ink-mute)',
+                marginTop: 8,
+                marginBottom: 16,
+              }}
+            >
+              {ARTICLES[0].subtitle}
+            </p>
+            <p className="lede">{ARTICLES[0].excerpt}</p>
+            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center' }}>
+              <Link to={`/articles/${ARTICLES[0].slug}`} className="btn btn-primary">
+                Read the article
+              </Link>
+              {ARTICLES.length > 1 && (
+                <Link to="/articles" className="rust-link">
+                  See all writing &rarr;
+                </Link>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* What's inside */}
-      <section className="section-parchment-warm">
+      <section className="section-parchment">
         <div className="container">
           <p className="eyebrow">WHAT'S INSIDE</p>
           <h2>Two layers. One mission.</h2>

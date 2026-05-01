@@ -18,6 +18,7 @@ import LSD from './pages/medicines/LSD';
 import Ayahuasca from './pages/medicines/Ayahuasca';
 import Kambo from './pages/medicines/Kambo';
 import Hape from './pages/medicines/Hape';
+import Articles from './pages/Articles';
 import MdmaInPlantMedicine from './pages/articles/MdmaInPlantMedicine';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
@@ -54,6 +55,7 @@ export default function App() {
             <Route path="/medicines/:slug" element={<MedicineDetail />} />
 
             {/* Articles */}
+            <Route path="/articles" element={<Articles />} />
             <Route
               path="/articles/mdma-in-plant-medicine"
               element={<MdmaInPlantMedicine />}
